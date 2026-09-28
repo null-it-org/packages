@@ -1,4 +1,9 @@
 {
   "extends": "@packages/typescript/storybook.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.stories.@(js|jsx|ts|tsx|mdx)", ".storybook/**/*"]
 }
