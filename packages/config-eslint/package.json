@@ -1,5 +1,5 @@
 {
-  "name": "@package/eslint-config",
+  "name": "@packages/eslint",
   "version": "0.0.0",
   "type": "module",
   "private": true,

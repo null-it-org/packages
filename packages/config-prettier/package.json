@@ -1,7 +1,5 @@
 {
-  "name": "@packages/config-prettier",
-  "description": "Shared prettier configuration",
-  "version": "0.0.0",
+  "name": "@packages/prettier",
   "type": "module",
   "private": true,
   "exports": {

@@ -1,0 +1,11 @@
+{
+  "extends": "@packages/typescript/node.json",
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "eslint.config.*",
+    "prettier.config.*"
+  ]
+}

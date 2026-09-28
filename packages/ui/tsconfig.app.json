@@ -1,0 +1,5 @@
+{
+  "extends": "@packages/typescript/app.json",
+  "include": ["./src"],
+  "exclude": ["**/*.stories.*", ".storybook"]
+}
