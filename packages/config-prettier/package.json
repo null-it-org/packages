@@ -1,0 +1,14 @@
+{
+  "name": "@packages/config-prettier",
+  "description": "Shared prettier configuration",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./base": "./prettier.config.js"
+  },
+  "devDependencies": {
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.8.1"
+  }
+}
