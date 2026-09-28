@@ -8,6 +8,7 @@
     "declarationDir": "dist",
     "outDir": "dist",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "types": ["vite/client"]
   }
 }

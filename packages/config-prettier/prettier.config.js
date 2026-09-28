@@ -1,3 +1,6 @@
+import * as organizeImports from 'prettier-plugin-organize-imports';
+import * as tailwindcss from 'prettier-plugin-tailwindcss';
+
 /**
  * @see https://prettier.io/docs/configuration
  * @type {import('prettier').Config}
@@ -10,6 +13,6 @@ export default {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
-  plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss'],
-  tailwindFunctions: ['clsx', 'cn', 'cva']
+  plugins: [organizeImports, tailwindcss],
+  tailwindFunctions: ['clsx', 'cn', 'cva'],
 };

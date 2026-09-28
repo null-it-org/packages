@@ -6,30 +6,34 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "vue-tsc -b && vite build",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "vue": "^3.5.42"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3",
-    "@vitejs/plugin-vue": "^6.0.8",
-    "@vue/tsconfig": "^0.9.1",
-    "typescript": "~6.0.2",
-    "vite": "^8.3.0",
-    "vue-tsc": "^3.3.11",
+    "@chromatic-com/storybook": "latest",
     "@packages/eslint": "workspace:*",
     "@packages/prettier": "workspace:*",
     "@packages/typescript": "workspace:*",
-    "storybook": "^10.6.0",
-    "@storybook/vue3-vite": "^10.6.0",
-    "@chromatic-com/storybook": "latest",
-    "@storybook/addon-vitest": "^10.6.0",
     "@storybook/addon-a11y": "^10.6.0",
     "@storybook/addon-docs": "^10.6.0",
-    "vitest": "latest",
-    "playwright": "latest",
+    "@storybook/addon-vitest": "^10.6.0",
+    "@storybook/vue3-vite": "^10.6.0",
+    "@types/node": "^24.13.3",
+    "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/browser-playwright": "latest",
-    "@vitest/coverage-v8": "latest"
+    "@vitest/coverage-v8": "latest",
+    "@vue/tsconfig": "^0.9.1",
+    "eslint": "10.9.1",
+    "playwright": "latest",
+    "prettier": "3.9.6",
+    "storybook": "^10.6.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "latest",
+    "vue-tsc": "^3.3.11"
   }
 }

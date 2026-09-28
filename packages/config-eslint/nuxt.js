@@ -1,6 +1,6 @@
 import { configureVueProject, defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript";
 import pluginVue from "eslint-plugin-vue";
-import { config as baseConfig } from "./base";
+import baseConfig from "@packages/eslint/base";
 
 configureVueProject({ rootDir: undefined });
 

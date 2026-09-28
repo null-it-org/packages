@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button :class="classes" :style="style" type="button" @click="onClick">{{ label }}</button>
 </template>
 
 <script lang="ts" setup>
@@ -26,7 +26,7 @@ const props = withDefaults(
      */
     backgroundColor?: string;
   }>(),
-  { primary: false }
+  { primary: false },
 );
 
 const emit = defineEmits<{

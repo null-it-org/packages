@@ -5,7 +5,7 @@
   "exports": {
     "./base": "./prettier.config.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-tailwindcss": "^0.8.1"
   }
