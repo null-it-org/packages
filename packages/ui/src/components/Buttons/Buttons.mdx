@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ActionButtonStories from './ActionButton.stories';
+
+<Meta title="Docs/Buttons" />
+
+# Action buttons
+
+Action buttons are intended to simply provide click handlers and nothing more.
+If a button is needed for navigation or to submit a form, consider using a `LinkButton` or `SubmitButton` instead.
+
+The button types used here are Primary, Secondary, and Tertiary in that order:
+
+## Plain text
+
+<Canvas of={ActionButtonStories.Text} meta={ActionButtonStories} />
+
+### Slots & props
+
+<Controls of={ActionButtonStories.Text} exclude={['type']} />
+
+## With icon and text
+
+<Canvas of={ActionButtonStories.IconWithText} meta={ActionButtonStories} />
+
+### Slots & props
+
+<Controls of={ActionButtonStories.IconWithText} exclude={['type']} />
+
+## With icon
+
+<Canvas of={ActionButtonStories.Icon} meta={ActionButtonStories} />
+
+### Slots & props
+
+<Controls of={ActionButtonStories.Icon} exclude={['type']} />

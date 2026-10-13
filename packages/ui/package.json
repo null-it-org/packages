@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "latest",
+    "@iconify/types": "^2.0.0",
+    "@iconify/vue": "^5.0.3",
     "@packages/eslint": "workspace:*",
     "@packages/prettier": "workspace:*",
     "@packages/typescript": "workspace:*",
