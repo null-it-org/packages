@@ -1,6 +1,6 @@
-import type { LinkProps } from "storybook/internal/router";
+import type { LinkProps } from "@/types/LinkProps";
 import type { VNode } from "vue";
 
 export type UiConfig = {
-  renderLink: (link: LinkProps) => VNode
+  renderLink: (link: Partial<LinkProps>) => VNode
 };

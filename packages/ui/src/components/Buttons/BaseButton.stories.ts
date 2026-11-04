@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
 import BaseButton from './BaseButton.vue';
 import { sizes, variants } from '../ui/button';
+import { expect } from 'storybook/test';
 
 const meta: Meta<typeof BaseButton> = {
   component: BaseButton,
@@ -20,7 +21,7 @@ const meta: Meta<typeof BaseButton> = {
 export default meta;
 type Story = StoryObj<typeof BaseButton>;
 
-export const ShadCnButton: Story = {
+export const Primary: Story = {
   render: args => ({
     components: { BaseButton },
     setup() {
@@ -31,11 +32,23 @@ export const ShadCnButton: Story = {
       ' <BaseButton v-bind="args">Text</BaseButton>' +
       ' <BaseButton v-bind="args" icon="mdi:check">Icon text</BaseButton>' +
       ' <BaseButton v-bind="args" icon="mdi:check"/>' +
-      ' <DeleteButton />' +
       '</div>',
   }),
   args: {
     variant: 'default',
     size: 'default',
+  },
+};
+
+export const WithLink: Story = {
+  ...Primary,
+  args: {
+    ...Primary.args,
+    href: 'https://example.com',
+    target: '_blank',
+  },
+  play: async ({ canvas, args }) => {
+    const button = canvas.getAllByTestId('base-button')[0];
+    await expect(button).toHaveAttribute('href', args.href);
   },
 };

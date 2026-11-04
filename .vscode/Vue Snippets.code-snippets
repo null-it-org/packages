@@ -4,7 +4,7 @@
     "prefix": "story",
     "description": "Generate a Storybook definition for a Vue component",
     "body": [
-      "import type { Meta, StoryObj } from '@storybook/vue3';",
+      "import type { Meta, StoryObj } from '@storybook/vue3-vite';",
       "",
       "import ${1:${TM_FILENAME_BASE/(.*)\\.stories/$1/}} from './${1:${TM_FILENAME_BASE}}.vue';",
       "",
