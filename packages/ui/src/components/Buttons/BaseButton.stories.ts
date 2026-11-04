@@ -31,6 +31,7 @@ export const ShadCnButton: Story = {
       ' <BaseButton v-bind="args">Text</BaseButton>' +
       ' <BaseButton v-bind="args" icon="mdi:check">Icon text</BaseButton>' +
       ' <BaseButton v-bind="args" icon="mdi:check"/>' +
+      ' <DeleteButton />' +
       '</div>',
   }),
   args: {

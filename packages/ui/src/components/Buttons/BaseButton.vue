@@ -17,6 +17,7 @@ export type BaseButtonProps = {
   size?: ButtonVariants['size'];
   class?: HTMLAttributes['class'];
   icon?: string | IconifyIconProps;
+  type?: HTMLButtonElement['type'];
 } & Partial<LinkProps>;
 
 const props = withDefaults(defineProps<BaseButtonProps>(), {
