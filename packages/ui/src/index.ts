@@ -1,8 +1,8 @@
 import { h, type App } from "vue";
-import type { UIConfig } from "./types/UIConfig";
+import type { UiConfig } from "./types/UiConfig";
 
 export default {
-  install(app: App, config?: UIConfig): void {
+  install(app: App, config?: UiConfig): void {
     config = {
       renderLink(link) {
         return h('a', link)

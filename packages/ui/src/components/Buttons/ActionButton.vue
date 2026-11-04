@@ -29,6 +29,7 @@ import type { ActionButtonProps } from '@/types/Buttons';
 import { Icon } from '@iconify/vue';
 import { twMerge } from 'tailwind-merge';
 import { computed, type ComputedRef } from 'vue';
+import { Button } from '../ui/button';
 
 const props = withDefaults(defineProps<ActionButtonProps>(), {
   variant: ButtonVariant.Primary,
