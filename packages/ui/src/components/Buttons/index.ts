@@ -17,7 +17,7 @@ const defaultButtons: Record<string, DefaultButtonType> = {
   SubmitButton: {
     type: 'submit',
     icon: 'mdi:content-save-outline',
-    variant: 'default'
+    variant: 'positive'
   },
 };
 
