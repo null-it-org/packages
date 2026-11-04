@@ -17,14 +17,14 @@ const defaultButtons: Record<string, DefaultButtonType> = {
   SubmitButton: {
     type: 'submit',
     icon: 'mdi:content-save-outline',
-    variant: 'default',
+    variant: 'default'
   },
 };
 
 type Context = { attrs: Record<string, unknown>; slots: Array<unknown> };
 function createButton(props: BaseButtonProps, context: Context, button: DefaultButtonType) {
   // @ts-expect-error Props aren't analyzed properly by ts
-  h(BaseButton, { ...props, ...button, ...context.attrs }, context.slots);
+  return h(BaseButton, { ...props, ...button, ...context.attrs }, context.slots);
 }
 
 export const DeleteButton = (props: BaseButtonProps, context: Context) =>

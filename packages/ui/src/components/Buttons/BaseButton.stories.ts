@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
 import BaseButton from './BaseButton.vue';
+import { DeleteButton, SubmitButton, SyncButton } from '.';
 import { sizes, variants } from '../ui/button';
 import { expect } from 'storybook/test';
 
@@ -23,7 +24,7 @@ type Story = StoryObj<typeof BaseButton>;
 
 export const Primary: Story = {
   render: args => ({
-    components: { BaseButton },
+    components: { BaseButton, DeleteButton },
     setup() {
       return { args };
     },
@@ -51,4 +52,36 @@ export const WithLink: Story = {
     const button = canvas.getAllByTestId('base-button')[0];
     await expect(button).toHaveAttribute('href', args.href);
   },
+};
+
+export const Delete: Story = {
+  ...Primary,
+  render: args => ({
+    components: { Button: DeleteButton },
+    setup() {
+      return { args };
+    },
+    template:
+      '<div class="flex gap-1">' +
+      '  <Button v-bind="args">Icon text</Button>' +
+      '  <Button v-bind="args"/>' +
+      '</div>',
+  }),
+  args: {},
+};
+
+export const Sync: Story = {
+  ...Delete,
+  render: args => ({
+    ...Delete.render(args),
+    components: { Button: SyncButton },
+  }),
+};
+
+export const Submit: Story = {
+  ...Delete,
+  render: args => ({
+    ...Delete.render(args),
+    components: { Button: SubmitButton },
+  }),
 };
